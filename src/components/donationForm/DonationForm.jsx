@@ -4,7 +4,7 @@ import logo from '../../assets/images/only_logo.png';
 import "./DonationForm.css";
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:3000';
+const API_BASE = 'https://sargodhaeventbe-production.up.railway.app';
 
 function DonationForm() {
   const [form, setForm] = useState({

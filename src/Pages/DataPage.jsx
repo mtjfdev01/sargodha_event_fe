@@ -5,7 +5,7 @@ import DonationTypePieChart from '../components/donationTypePieChart/DonationTyp
 import DetailedDonationSummaryChart from '../components/detailedDonationSummaryChart/DetailedDonationSummaryChart';
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:3000';
+const API_BASE = 'https://sargodhaeventbe-production.up.railway.app';
 
 const DataPage = () => {
   const [donations, setDonations] = useState([]);
