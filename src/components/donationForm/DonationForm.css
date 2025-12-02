@@ -1,0 +1,164 @@
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(255, 183, 207);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+.form-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    border: 2px solid #8e0034;
+    background: #c20047;
+  }
+  
+  .form-header {
+    background: linear-gradient(to right, #eeaac0, #c20047 );
+    /* background: #d95480; */
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+  }
+  
+  .header-logo {
+    width: 70px;
+  }
+  
+  .form-header h2 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .donation-form {
+    padding: 20px;
+  }
+  
+  .form-body {
+    display: flex;
+    gap: 25px;
+    color: white;
+  }
+  
+  /* LEFT COLUMN */
+  .left-column {
+    display: grid;
+    grid-template-columns: 158px 1fr;
+    gap: 10px 20px;
+  }
+  
+  .left-column label {
+    margin-top: 8px;
+    padding-left: 21px;
+  }
+  
+  .left-column input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  /* RIGHT COLUMN */
+  .right-column {
+    flex: 2;
+  }
+  
+  .right-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 10px 20px;
+  }
+  
+  .right-grid input,
+  .right-grid textarea {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  textarea {
+    height: 60px;
+  }
+  
+  .date-box {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .date-box input {
+    width: 50%;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    width: 18vw;
+    padding: 12px;
+    font-size: 18px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    /* margin-top: 20px; */
+    margin-left: 25vw;
+  }
+  
+  .submit-btn:hover {
+    background: #eee;
+  }
+  
+  /* RESPONSIVE FIX FOR SMALL DEVICES */
+@media (max-width: 850px) {
+  .form-body {
+    flex-direction: column;
+  }
+
+  .wrapper {
+    padding: 0px;
+  }
+  .right-grid {
+    grid-template-columns: 1fr; /* Make right grid single column */
+    gap: 15px 0;
+  }
+
+  .left-column {
+    grid-template-columns: 1fr; /* Make left column single column */
+    gap: 10px 0;
+  }
+
+  .left-column label,
+  .right-grid label {
+    padding-left: 0;
+    margin-top: 5px;
+  }
+
+  .submit-btn {
+    width: 100%; /* Make button full width */
+    margin-left: 0; /* Remove fixed margin */
+    margin-top: 15px;
+  }
+
+  .header-logo {
+    margin-top: 10px;
+    width: 50px; /* optional smaller logo on small devices */
+  }
+
+  input,
+  select,
+  textarea {
+   width: 100%; /* Ensure all inputs are full width */
+  }
+}
+
+
+
+
