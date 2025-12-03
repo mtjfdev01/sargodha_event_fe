@@ -134,6 +134,8 @@ const DonationTypePieChart = ({ donations: propDonations, data }) => {
         boxSizing: "border-box",
         background: "radial-gradient(circle, #4B4B4B 0, #2F2F2F 70%)",
         overflow: "hidden",
+        minHeight: 420,
+        minWidth: 0,
       }}
     >
       <h2
@@ -148,8 +150,9 @@ const DonationTypePieChart = ({ donations: propDonations, data }) => {
       >
         Donation Type wise Summary
       </h2>
-      <ResponsiveContainer width="100%" height="85%">
-        <PieChart>
+      <div style={{ width: "100%", height: "357px", minHeight: 357, minWidth: 0 }}>
+        <ResponsiveContainer width="100%" height="100%">
+          <PieChart>
           <Pie
             data={displayData}
             dataKey="value"
@@ -180,7 +183,8 @@ const DonationTypePieChart = ({ donations: propDonations, data }) => {
           />
           <Legend verticalAlign="bottom" iconType="circle" wrapperStyle={{ color: "#fff" }} />
         </PieChart>
-      </ResponsiveContainer>
+        </ResponsiveContainer>
+      </div>
     </section>
   );
 };

@@ -28,13 +28,14 @@ propData.totalRemainingAll= 0
 
 console.log("DonationSummaryChart data:", data);
   return (
-    <div style={{ width: "100%", height: 300, background: "#3b3b3b", padding: 16, overflowX: "hidden" }}>
+    <div style={{ width: "100%", height: 300, background: "#3b3b3b", padding: 16, overflowX: "hidden", minHeight: 300, minWidth: 0 }}>
       <h3 style={{ color: "#fff", textAlign: "center", marginBottom: 8 }}>
         Total Donation Summary
       </h3>
 
-      <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+      <div style={{ width: "100%", height: "calc(100% - 40px)", minHeight: 0, minWidth: 0 }}>
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#777" />
           <XAxis dataKey="name" stroke="#fff" />
           <YAxis
@@ -56,7 +57,8 @@ console.log("DonationSummaryChart data:", data);
             />
           </Bar>
         </BarChart>
-      </ResponsiveContainer>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };

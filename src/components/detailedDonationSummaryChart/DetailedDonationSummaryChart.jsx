@@ -57,7 +57,7 @@ const DetailedDonationSummaryChart = () => {
 
   if (loading) {
     return (
-      <div style={{ width: "100%", height: 400, background: "linear-gradient(90deg,#2F2F2F,#4A4A4A)", padding: 16, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }}>
+      <div style={{ width: "100%", height: 400, background: "linear-gradient(90deg,#2F2F2F,#4A4A4A)", padding: 16, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", minHeight: 400, minWidth: 0 }}>
         <p>Loading detailed summary…</p>
       </div>
     );
@@ -65,7 +65,7 @@ const DetailedDonationSummaryChart = () => {
 
   if (error) {
     return (
-      <div style={{ width: "100%", height: 400, background: "linear-gradient(90deg,#2F2F2F,#4A4A4A)", padding: 16, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }}>
+      <div style={{ width: "100%", height: 400, background: "linear-gradient(90deg,#2F2F2F,#4A4A4A)", padding: 16, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", minHeight: 400, minWidth: 0 }}>
         <p style={{ color: "salmon" }}>{error}</p>
       </div>
     );
@@ -73,7 +73,7 @@ const DetailedDonationSummaryChart = () => {
 
   if (displayData.length === 0) {
     return (
-      <div style={{ width: "100%", height: 400, background: "linear-gradient(90deg,#2F2F2F,#4A4A4A)", padding: 16, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }}>
+      <div style={{ width: "100%", height: 400, background: "linear-gradient(90deg,#2F2F2F,#4A4A4A)", padding: 16, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", minHeight: 400, minWidth: 0 }}>
         <p>No machines summary available</p>
       </div>
     );
@@ -86,6 +86,8 @@ const DetailedDonationSummaryChart = () => {
         height: 400,
         background: "linear-gradient(90deg,#2F2F2F,#4A4A4A)",
         padding: 16,
+        minHeight: 400,
+        minWidth: 0,
       }}
     >
       <h3
@@ -98,11 +100,12 @@ const DetailedDonationSummaryChart = () => {
       >
         Detailed Summary
       </h3>
-      <ResponsiveContainer width="100%" height="100%">
-        <BarChart
-          data={displayData}
-          margin={{ top: 20, right: 30, left: 40, bottom: 80 }}
-        >
+      <div style={{ width: "100%", height: "calc(100% - 40px)", minHeight: 0, minWidth: 0 }}>
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart
+            data={displayData}
+            margin={{ top: 20, right: 30, left: 40, bottom: 80 }}
+          >
           <CartesianGrid strokeDasharray="3 3" stroke="#777" />
           <XAxis
             dataKey="name"
@@ -152,7 +155,8 @@ const DetailedDonationSummaryChart = () => {
             />
           </Bar>
         </BarChart>
-      </ResponsiveContainer>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };
