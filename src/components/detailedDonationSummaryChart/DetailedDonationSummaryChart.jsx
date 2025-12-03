@@ -84,10 +84,10 @@ console.log("displayData", displayData);
     <div
       style={{
         width: "100%",
-        height: 400,
+        height: 550,
         background: "linear-gradient(90deg,#2F2F2F,#4A4A4A)",
         padding: 16,
-        minHeight: 400,
+        minHeight: 550,
         minWidth: 0,
       }}
     >
