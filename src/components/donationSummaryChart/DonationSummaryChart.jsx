@@ -123,11 +123,11 @@ const DonationSummaryChart = ({ propData }) => {
     <div
       style={{
         width: "100%",
-        height: "100vh",
+        height: "90vh",
         background: "#3b3b3b",
         padding: 16,
         overflowX: "hidden",
-        minHeight: "100vh",
+        minHeight: "90vh",
         minWidth: 0,
       }}
     >
@@ -163,6 +163,7 @@ const DonationSummaryChart = ({ propData }) => {
             />
 
             <YAxis
+              width={90} 
               stroke="#fff"
               tickFormatter={formatNumber}
               tick={{ fill: "#fff" }} // ✔ text color
