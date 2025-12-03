@@ -123,11 +123,11 @@ const DonationSummaryChart = ({ propData }) => {
     <div
       style={{
         width: "100%",
-        height: 300,
+        height: "100vh",
         background: "#3b3b3b",
         padding: 16,
         overflowX: "hidden",
-        minHeight: 300,
+        minHeight: "100vh",
         minWidth: 0,
       }}
     >
