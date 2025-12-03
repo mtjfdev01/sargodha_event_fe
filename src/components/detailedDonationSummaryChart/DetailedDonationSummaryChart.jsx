@@ -30,7 +30,7 @@ const DetailedDonationSummaryChart = () => {
       setLoading(true);
       setError("");
       try {
-        const res = await axios.get(`${API_BASE}/donations/machines/summary`);
+        const res = await axios.get(`${API_BASE}/donations/machines_summary`);
         if (mounted) setMachinesSummary(res.data || null);
       } catch (err) {
         console.error("DetailedDonationSummaryChart fetch error:", err);

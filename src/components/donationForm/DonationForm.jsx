@@ -43,7 +43,7 @@ function DonationForm() {
       setDonations(donationsRes.data);
 
       // Fetch machines summary
-      const machinesRes = await axios.get(`${API_BASE}/donations/machines/summary`);
+      const machinesRes = await axios.get(`${API_BASE}/donations/machines_summary`);
       console.log('Fetched machines summary:', machinesRes.data);
       setMachinesSummary(machinesRes.data);
     } catch (err) {

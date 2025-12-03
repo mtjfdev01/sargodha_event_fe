@@ -20,7 +20,7 @@ const DataPage = () => {
       const donationsRes = await axios.get(`${API_BASE}/donations`);
       setDonations(donationsRes.data);
 
-      const machinesRes = await axios.get(`${API_BASE}/donations/machines/summary`);
+      const machinesRes = await axios.get(`${API_BASE}/donations/machines_summary`);
       setMachinesSummary(machinesRes.data);
     } catch (err) {
       console.error('Error fetching data:', err);
