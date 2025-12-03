@@ -192,7 +192,7 @@ const DonationSummaryChart = ({ propData }) => {
                 formatter={formatNumber}
                 fill="#fff"
                 style={{
-                  fontSize: 12,
+                  fontSize: 22,
                   fontWeight: "bold",
                 }}
               />
