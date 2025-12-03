@@ -31,8 +31,9 @@ const DetailedDonationSummaryChart = () => {
       setError("");
       try {
         const res = await axios.get(`${API_BASE}/donations/machines_summary`);
+        console.log("res", res?.data);
         if (mounted) setMachinesSummary(res.data || null);
-      } catch (err) {
+      } catch (err) { 
         console.error("DetailedDonationSummaryChart fetch error:", err);
         if (mounted) setError("Failed to load machines summary");
       } finally {
@@ -52,9 +53,9 @@ const DetailedDonationSummaryChart = () => {
     collected: machine.collectedAmount || 0,
     remaining: Math.max(machine.remainingAmount || 0, 0),
   }));
-
+ console.log("machineData", machineData);
   const displayData = machineData.length > 0 ? machineData : [];
-
+console.log("displayData", displayData);
   if (loading) {
     return (
       <div style={{ width: "100%", height: 400, background: "linear-gradient(90deg,#2F2F2F,#4A4A4A)", padding: 16, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", minHeight: 400, minWidth: 0 }}>

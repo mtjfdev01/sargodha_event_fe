@@ -14,7 +14,7 @@ import {
 const formatNumber = (n) => n.toLocaleString(); // 96000000 -> "96,000,000"
 
 const DonationSummaryChart = ({propData}) => {
-  console.log("propData", propData);
+  // console.log("propData", propData);
   // return;
   if(propData?.totalRemainingAll < 0 ) {
 propData.totalRemainingAll= 0
@@ -26,7 +26,7 @@ propData.totalRemainingAll= 0
 ];
 
 
-console.log("DonationSummaryChart data:", data);
+// console.log("DonationSummaryChart data:", data);
   return (
     <div style={{ width: "100%", height: 300, background: "#3b3b3b", padding: 16, overflowX: "hidden", minHeight: 300, minWidth: 0 }}>
       <h3 style={{ color: "#fff", textAlign: "center", marginBottom: 8 }}>
