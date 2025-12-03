@@ -20,11 +20,23 @@ const DonationSummaryChart = ({propData}) => {
 propData.totalRemainingAll= 0
   }
   const data = [
-  { name: "Budgeted", value: propData?.totalRequiredAll},
-  { name: "Received / Pledge", value: propData?.totalCollectedAll },
-  { name: "Balance", value: propData?.totalRemainingAll },
-];
-
+    {
+      name: "Budgeted",
+      value: propData?.totalRequiredAll,
+      color: "#0074B8", // blue
+    },
+    {
+      name: "Received / Pledge",
+      value: propData?.totalCollectedAll,
+      color: "#F5A623", // yellow/orange
+    },
+    {
+      name: "Balance",
+      value: propData?.totalRemainingAll,
+      color: "#2E8B57", // green
+    },
+  ];
+  
 
 // console.log("DonationSummaryChart data:", data);
   return (
