@@ -161,7 +161,7 @@ const DonationTypePieChart = ({ donations: propDonations, data }) => {
             cy="50%"
             outerRadius="70%"
             paddingAngle={1}
-            label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+            label={({ name, percent }) => `${name} ${(percent).toFixed(1)}%`}
           >
             {displayData.map((entry, index) => (
               <Cell key={entry.name} fill={COLORS[index % COLORS.length]} />

@@ -105,7 +105,7 @@ console.log("displayData", displayData);
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={displayData}
-            margin={{ top: 20, right: 30, left: 40, bottom: 80 }}
+            margin={{ top: 20, right: 30, left: 40, bottom: 120 }}
           >
           <CartesianGrid strokeDasharray="3 3" stroke="#777" />
           <XAxis
@@ -114,7 +114,7 @@ console.log("displayData", displayData);
             interval={0}
             angle={-40}
             textAnchor="end"
-            height={80}
+            height={120}
           />
           <YAxis
             stroke="#fff"
