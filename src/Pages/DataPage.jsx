@@ -30,9 +30,9 @@ const DataPage = () => {
   return (
     <div>
       {machinesSummary && <DonationSummaryChart propData={machinesSummary} />}
-      <DetailedDonationSummaryChart data={donations} />
+      {/* <DetailedDonationSummaryChart data={donations} /> */}
       {/* <DonorReportTable data={donations} /> */}
-      <DonationTypePieChart data={donations} />
+      {/* <DonationTypePieChart data={donations} /> */}
     </div>
   );
 };
